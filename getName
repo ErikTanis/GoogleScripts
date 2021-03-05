@@ -1,7 +1,7 @@
-function getUUID(UUID) {
+function getName(UUID) {
     try {
         var url = 'https://playerdb.co/api/player/minecraft/' + UUID;
-        var res = UrlFetchApp.fetch(url);
+        var res = UrlFetchApp.fetch(url)
         var content = res.getContentText();
 
         var json = JSON.parse(content);
