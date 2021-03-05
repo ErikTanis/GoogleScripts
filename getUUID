@@ -1,4 +1,4 @@
-function func_getUUID(NAME) {
+function f_getUUID(NAME) {
     try {
         var url = 'https://playerdb.co/api/player/minecraft/' + NAME;
         var res = UrlFetchApp.fetch(url)
