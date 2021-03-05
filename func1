@@ -1,0 +1,14 @@
+function getName(UUID) {
+    try {
+        var url = "https://playerdb.co/api/player/minecraft/" + UUID;
+        var res = UrlFetchApp.fetch(url)
+        var content = res.getContentText();
+
+        var json = JSON.parse(content);
+        var base = json["data"]["player"]["username"];
+        return base;
+    } catch (e) {
+        // Mocht het een error geven, zal het de volgende output hebben.
+        return "ERR_UUID";
+    }
+}
